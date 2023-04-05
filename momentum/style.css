@@ -37,4 +37,18 @@ a {
 
 .hello {
   text-align: center;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  margin: 30px auto 0;
 }/*# sourceMappingURL=style.css.map */
