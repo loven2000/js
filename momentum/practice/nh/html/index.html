@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../asset/css/jquery-ui.min.css" />
+    <link rel="stylesheet" href="../asset/css/swiper.min.css" />
+    <link rel="stylesheet" href="../asset/css/style.css">
     <link rel="stylesheet" href="../asset/css/main.css">
+    <script src="../asset/js/jquery-3.6.0.min.js"></script>
+    <script src="../asset/js/jquery-ui.min.js"></script>
+    <script src="../asset/js/swiper.min.js"></script>
+    <script src="../asset/js/common.js" defer></script>
     <title>nh연습</title>
 </head>
 <body>
@@ -20,13 +27,29 @@
             </a>
             <a href="#a" class="alarm">
                 <img src="../asset/img/ico-bell.png" alt="알림">
+                <span>1</span>
             </a>
-            <button type="button" class="btn-menu">
-                <img src="../asset/img/ico-hamburger.png" alt="전체페이지">
-            </a>
+            <button type="button" class="btn-menu"></button>
         </div>
     </header>
-    <section class="visual">비주얼영역</section>
+    <!-- visual area -->
+    <section class="visual">
+        <div class="user-info">
+            <span>아무개님, 안녕!!</span>
+            <span>삼성동 양재터미널</span>
+        </div>
+        <div class="login-time">몇분전에 로그인</div>
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                Slide 1</div>
+              <div class="swiper-slide">Slide 2</div>
+              <div class="swiper-slide">Slide 3</div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+    </section>
+    <!-- // visual area-->
     <section class="my-menu">마이메뉴 영역</section>
     <section class="outsell">
 매출속보 영역
