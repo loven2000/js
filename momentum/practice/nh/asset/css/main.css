@@ -152,6 +152,18 @@
   background-color: var(--white);
   box-sizing: border-box;
 }
+.menu-tap__slide .menuSwiper ul li.fav {
+  position: relative;
+}
+.menu-tap__slide .menuSwiper ul li.fav::after {
+  content: "";
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/ico-starCircle_on.png) no-repeat center/24px 24px;
+}
 .menu-tap__slide .menuSwiper ul li > a {
   text-decoration: none;
 }

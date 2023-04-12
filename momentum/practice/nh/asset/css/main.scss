@@ -162,6 +162,19 @@
                     box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.12);
                     background-color: var(--white);
                     box-sizing: border-box;
+
+                    &.fav {
+                        position:relative;
+                        &::after {
+                            content:"";
+                            position:absolute;
+                            top:-5px;
+                            right:-5px;
+                            width:24px;
+                            height:24px;
+                            background:url(../img/ico-starCircle_on.png)no-repeat center/24px 24px;
+                        }
+                    }
                     
                     >a {
                         text-decoration: none;
