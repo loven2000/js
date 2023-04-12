@@ -12,6 +12,21 @@ var main = new Swiper('.menuSwiper', {
     },
   });
   
+//메인페이지 메뉴이벤트1
+const mainMenu1 = document.querySelectorAll(".menu-tap__title > li");
+
+mainMenu1.forEach(function (mainMenu1) {
+  mainMenu1.addEventListener("click", function () {
+    mainMenu1.classList.toggle("on");
+    const onElements = document.querySelectorAll(".menu-tap__title > li.on");
+    onElements.forEach(function (onElement) {
+      if (onElement !== mainMenu1) {
+        onElement.classList.remove("on");
+      }
+    });
+  });
+});
+
   //비율유지 박스
 //   $(window).resize(function(){
 //     var winWidth = $(window).width();

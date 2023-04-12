@@ -125,15 +125,33 @@
         display:flex;
         justify-content: flex-start;
 
-        a {
-            text-decoration: none;
-            color:var(--gray);
-            font-size: 14px;
-        }
-
         li {
             list-style: none;
             margin-right:18px;
+            >a {
+                text-decoration: none;
+                color:var(--gray);
+                font-size: 14px;
+            }
+            &.on {
+                position:relative;
+                >a {
+                    color:var(--green);
+                }
+                &::after{
+                    content:"";
+                    position:absolute;
+                    top:22px;
+                    left:50%;
+                    transform: translateX(-50%);
+                    width:21px;
+                    height:22px;
+                    background:var(--green);
+                    border:5px solid var(--white);
+                    border-radius:25px;
+                    box-sizing: border-box;
+                }
+            }
         }
 
 
