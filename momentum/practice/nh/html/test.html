@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tab Example</title>
+	<style>
+/* Hide all tab contents by default */
+.tabcontent {
+  display: none;
+}
+
+/* Style the tab buttons */
+.tab button {
+  background-color: #f1f1f1;
+  color: black;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 50%;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Set active tab button */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab contents */
+.tabcontent {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+	</style>
+</head>
+<body>
+	<div class="tab">
+    <button class="tablinks" onclick="openTab(event, 'tab1')">Tab 1</button>
+    <button class="tablinks" onclick="openTab(event, 'tab2')">Tab 2</button>
+  </div>
+  
+  <div id="tab1" class="tabcontent">
+    <h3>Content 1-1</h3>
+    <p>Some text for content 1-1.</p>
+  </div>
+  
+  <div id="tab2" class="tabcontent">
+    <h3>Content 2-1</h3>
+    <p>Some text for content 2-1.</p>
+  </div>
+  
+  
+  <script>
+   // Open the default tab on page load
+document.getElementById("defaultOpen").click();
+
+function openTab(evt, tabName) {
+  var i, tabcontent, tablinks;
+
+  // Hide all tab contents
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  // Remove "active" class from all tab buttons
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Show the selected tab content and mark the selected tab button as active
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+  </script>
+</body>
+</html>
